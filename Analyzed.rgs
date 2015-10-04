@@ -1,0 +1,40 @@
+HKCR
+{
+    NoRemove CLSID
+    {
+        ForceRemove '{CE097244-9355-4CF2-8890-0161227E14CF}' = s 'Analyzed Visualization Class'
+        {
+            InprocServer32 = s '%MODULE%'
+            {
+                val ThreadingModel = s 'Apartment'
+            }
+        }
+    }
+}
+HKLM
+{
+    NoRemove SOFTWARE
+    {
+        NoRemove Microsoft
+        {
+            NoRemove MediaPlayer
+            {
+                NoRemove Objects
+                {
+                    NoRemove Effects
+                    {
+                        ForceRemove Analyzed
+                        {
+                            Properties
+                            {
+                                val classid = s '{CE097244-9355-4CF2-8890-0161227E14CF}'
+                                val name = s 'res://Analyzed.dll/RT_STRING/#100'
+                                val description = s 'res://Analyzed.dll/RT_STRING/#101'
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,55 @@
+// This file will be processed by the MIDL tool to
+// produce the type library (Analyzed.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+[
+	object,
+	uuid(F121F77B-196C-4d81-B297-4EDED0AEC4AF),
+	dual,
+	helpstring("IAnalyzed Interface"),
+	pointer_default(unique)
+]
+interface IAnalyzed : IDispatch
+{
+	[id(1), helpstring("method Initialize")] HRESULT Initialize([in] OLE_HANDLE window,[in] LONG resolution,[in] VARIANT_BOOL blur);
+	[id(2), helpstring("method Uninitialize")] HRESULT Uninitialize(void);
+	[id(3), helpstring("method GetVisualization")] HRESULT GetVisualization([out] LONG* index);
+	[id(4), helpstring("method SetVisualization")] HRESULT SetVisualization([in] LONG index);
+	[id(5), helpstring("method GetVisualizationCount")] HRESULT GetVisualizationCount([out] LONG* count);
+	[id(6), helpstring("method GetVisualizationName")] HRESULT GetVisualizationName([out] BSTR* name, [in] LONG index);
+	[id(7), helpstring("method Update")] HRESULT Update([in] OLE_HANDLE levels);
+	[id(8), helpstring("method GetColorBackground")] HRESULT GetColorBackground([out] LONG* color);
+	[id(9), helpstring("method SetColorBackground")] HRESULT SetColorBackground([in] LONG color);
+	[id(10), helpstring("method GetColorTop")] HRESULT GetColorTop([out] LONG* color);
+	[id(11), helpstring("method SetColorTop")] HRESULT SetColorTop([in] LONG color);
+	[id(12), helpstring("method GetColorTopEnd")] HRESULT GetColorTopEnd([out] LONG* color);
+	[id(13), helpstring("method SetColorTopEnd")] HRESULT SetColorTopEnd([in] LONG color);
+	[id(14), helpstring("method GetColorBottom")] HRESULT GetColorBottom([out] LONG* color);
+	[id(15), helpstring("method SetColorBottom")] HRESULT SetColorBottom([in] LONG color);
+	[id(16), helpstring("method GetColorBottomEnd")] HRESULT GetColorBottomEnd([out] LONG* color);
+	[id(17), helpstring("method SetColorBottomEnd")] HRESULT SetColorBottomEnd([in] LONG color);
+	[id(18), helpstring("method GetColorPeak")] HRESULT GetColorPeak([out] LONG* color);
+	[id(19), helpstring("method SetColorPeak")] HRESULT SetColorPeak([in] LONG color);
+};
+
+[
+	uuid(1325F17F-2AA1-46AF-966F-11C277DB46E5),
+	version(1.0),
+	helpstring("Analyzed 1.0 Type Library")
+]
+library Analyzed
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(CE097244-9355-4CF2-8890-0161227E14CF),
+		version(1.0),
+		helpstring("Analyzed")
+	]
+	coclass Analyzed
+	{
+		[default] interface IAnalyzed;
+	};
+};

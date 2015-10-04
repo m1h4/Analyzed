@@ -1,0 +1,167 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "winres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Croatian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_HRV)
+#ifdef _WIN32
+LANGUAGE LANG_CROATIAN, SUBLANG_DEFAULT
+#pragma code_page(1250)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""winres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "1 TYPELIB ""Analyzed.tlb""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 0,5,1,0
+ PRODUCTVERSION 0,5,1,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "Marko Mihovilic"
+            VALUE "FileDescription", "Analyzed Visualization"
+            VALUE "FileVersion", "0, 5, 1, 0"
+            VALUE "InternalName", "Analyzed.dll"
+            VALUE "LegalCopyright", "Copyright (C) 2009. Marko Mihovilic. All Rights Reserved."
+            VALUE "OriginalFilename", "Analyzed.dll"
+            VALUE "ProductName", "Analyzed"
+            VALUE "ProductVersion", "0, 5, 1, 0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_ANALYZED            REGISTRY                "Analyzed.rgs"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PROPPAGE_MEDIUM DIALOGEX 0, 0, 210, 213
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Display"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LTEXT           "Offscreen Buffer Size:",IDC_STATIC,7,7,72,8
+    COMBOBOX        IDC_RESOLUTION,21,22,170,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "The larger the offscreen buffer size the sharper the visualization image but the slower the rendering. Set this to a lower value to improve performance if you are experiencing a low rendering speed.",IDC_STATIC,21,43,170,36
+    LTEXT           "Changes take effect only after the visualization is restarted.",IDC_STATIC,21,184,170,15
+    CONTROL         "Blur Effect",IDC_BLUR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,21,142,49,10
+    LTEXT           "Color Schema:",IDC_STATIC,7,86,47,8
+    COMBOBOX        IDC_COLOR,21,101,170,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Visual Effects:",IDC_STATIC,7,127,46,8
+    LTEXT           "Note:",IDC_STATIC,7,171,19,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_PROPPAGE_MEDIUM, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 127
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_EFFECTNAME          "Analyzed"
+    IDS_EFFECTDESCRIPTION   "Displays various power spectrum and waveform visualizations."
+    IDS_PRESETBARS          "Line Bars"
+    IDS_PRESETDOUBLEBARS    "Mirror Bars"
+    IDS_PRESETDIGITALBARS   "Digital Bars"
+    IDS_PRESETGHOSTBARS     "Line Ghost Bars"
+    IDS_PRESETDOUBLEGHOSTBARS "Mirror Ghost Bars"
+    IDS_PRESETDIGITALGHOSTBARS "Digital Ghost Bars"
+    IDS_PRESETDIGITALSCOPE  "Dot Scope"
+    IDS_PRESETBARSCOPE      "Bar Scope"
+END
+
+#endif    // Croatian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+1 TYPELIB "Analyzed.tlb"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
